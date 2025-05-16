@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		FA7084292DD75C04007B4840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084282DD75C04007B4840 /* AppDelegate.swift */; };
 		FA70842B2DD75C04007B4840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70842A2DD75C04007B4840 /* SceneDelegate.swift */; };
-		FA70842D2DD75C04007B4840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70842C2DD75C04007B4840 /* ViewController.swift */; };
 		FA7084302DD75C04007B4840 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA70842F2DD75C04007B4840 /* Base */; };
 		FA7084322DD75C05007B4840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7084312DD75C05007B4840 /* Assets.xcassets */; };
 		FA7084352DD75C05007B4840 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA7084342DD75C05007B4840 /* Base */; };
+		FA70843D2DD75C30007B4840 /* TopUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */; };
+		FA70843F2DD75C39007B4840 /* TopUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70843E2DD75C39007B4840 /* TopUpPageView.swift */; };
+		FA7084412DD75C4D007B4840 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */; };
+		FA7084432DD75CD6007B4840 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084422DD75CD6007B4840 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA7084252DD75C04007B4840 /* PulsaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7084282DD75C04007B4840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA70842A2DD75C04007B4840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA70842C2DD75C04007B4840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA70842F2DD75C04007B4840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA7084312DD75C05007B4840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA7084342DD75C05007B4840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7084362DD75C05007B4840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPageViewController.swift; sourceTree = "<group>"; };
+		FA70843E2DD75C39007B4840 /* TopUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPageView.swift; sourceTree = "<group>"; };
+		FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		FA7084422DD75CD6007B4840 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				FA7084282DD75C04007B4840 /* AppDelegate.swift */,
 				FA70842A2DD75C04007B4840 /* SceneDelegate.swift */,
-				FA70842C2DD75C04007B4840 /* ViewController.swift */,
+				FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */,
+				FA70843E2DD75C39007B4840 /* TopUpPageView.swift */,
+				FA7084422DD75CD6007B4840 /* UIView+Extension.swift */,
+				FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */,
 				FA70842E2DD75C04007B4840 /* Main.storyboard */,
 				FA7084312DD75C05007B4840 /* Assets.xcassets */,
 				FA7084332DD75C05007B4840 /* LaunchScreen.storyboard */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA70842D2DD75C04007B4840 /* ViewController.swift in Sources */,
+				FA70843D2DD75C30007B4840 /* TopUpPageViewController.swift in Sources */,
+				FA7084432DD75CD6007B4840 /* UIView+Extension.swift in Sources */,
+				FA70843F2DD75C39007B4840 /* TopUpPageView.swift in Sources */,
 				FA7084292DD75C04007B4840 /* AppDelegate.swift in Sources */,
 				FA70842B2DD75C04007B4840 /* SceneDelegate.swift in Sources */,
+				FA7084412DD75C4D007B4840 /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
