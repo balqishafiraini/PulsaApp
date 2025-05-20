@@ -12,7 +12,7 @@ protocol CustomSegmentedControlDelegate: AnyObject {
     func segmentedControl(didSelect index: Int)
 }
 
-class CustomSegmentedControl: UIView {
+class CustomSegmentedControlView: UIView {
     
     private var buttonTitles: [String]
     private var buttons: [UIButton] = []

@@ -14,8 +14,34 @@
 		FA7084352DD75C05007B4840 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA7084342DD75C05007B4840 /* Base */; };
 		FA70843D2DD75C30007B4840 /* TopUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */; };
 		FA70843F2DD75C39007B4840 /* TopUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70843E2DD75C39007B4840 /* TopUpPageView.swift */; };
-		FA7084412DD75C4D007B4840 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */; };
+		FA7084412DD75C4D007B4840 /* CustomSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084402DD75C4D007B4840 /* CustomSegmentedControlView.swift */; };
 		FA7084432DD75CD6007B4840 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084422DD75CD6007B4840 /* UIView+Extension.swift */; };
+		FA7084472DD75FD4007B4840 /* PulsaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084462DD75FD4007B4840 /* PulsaView.swift */; };
+		FA7084492DD76643007B4840 /* DataPackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084482DD76643007B4840 /* DataPackageView.swift */; };
+		FA70844D2DD76939007B4840 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70844C2DD76939007B4840 /* UIViewController+Extension.swift */; };
+		FA7084532DD77114007B4840 /* PulsaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084522DD77114007B4840 /* PulsaModel.swift */; };
+		FA7084552DD7711C007B4840 /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084542DD7711C007B4840 /* VoucherModel.swift */; };
+		FA7084642DD78680007B4840 /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084632DD78680007B4840 /* PriceFormatter.swift */; };
+		FA7084662DD7871A007B4840 /* PulsaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084652DD7871A007B4840 /* PulsaAPI.swift */; };
+		FA70846D2DD78850007B4840 /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70846C2DD78850007B4840 /* JSONFormatter.swift */; };
+		FA7084752DD85514007B4840 /* TransactionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084742DD85514007B4840 /* TransactionPageView.swift */; };
+		FA7084772DD855A8007B4840 /* TransactionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7084762DD855A8007B4840 /* TransactionPageViewController.swift */; };
+		FA70847F2DD86589007B4840 /* VoucherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70847E2DD86589007B4840 /* VoucherAPI.swift */; };
+		FA7085082DD8E3E2007B4840 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7085072DD8E3E2007B4840 /* UIImageView+Extension.swift */; };
+		FA70850A2DD8E42C007B4840 /* PulsaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7085092DD8E42C007B4840 /* PulsaViewController.swift */; };
+		FA70850C2DD8E459007B4840 /* VoucherPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70850B2DD8E459007B4840 /* VoucherPageViewController.swift */; };
+		FA70850E2DD8EB3D007B4840 /* DataPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70850D2DD8EB3D007B4840 /* DataPackageViewController.swift */; };
+		FA7085142DD97DA9007B4840 /* VoucherPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7085132DD97DA9007B4840 /* VoucherPageView.swift */; };
+		FA8D3F2E2DDAD248008A5670 /* StatusPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F2D2DDAD248008A5670 /* StatusPageModel.swift */; };
+		FA8D3F302DDAD25F008A5670 /* StatusPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F2F2DDAD25F008A5670 /* StatusPageAPI.swift */; };
+		FA8D3F322DDB79EA008A5670 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F312DDB79EA008A5670 /* UIAlertController+Extension.swift */; };
+		FA8D3F342DDBFD6E008A5670 /* VoucherListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F332DDBFD6E008A5670 /* VoucherListCell.swift */; };
+		FA8D3F362DDC0A05008A5670 /* TransactionSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F352DDC0A05008A5670 /* TransactionSuccessView.swift */; };
+		FA8D3F382DDC0A11008A5670 /* TransactionSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F372DDC0A11008A5670 /* TransactionSuccessViewController.swift */; };
+		FA8D3F3A2DDC5FCF008A5670 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F392DDC5FCF008A5670 /* NumberFormatter.swift */; };
+		FA8D3F3C2DDC6935008A5670 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F3B2DDC6935008A5670 /* UILabel+Extension.swift */; };
+		FA8D3F3E2DDC6E55008A5670 /* PaymentDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F3D2DDC6E55008A5670 /* PaymentDetailRowView.swift */; };
+		FA8D3F402DDC6E77008A5670 /* Notifications+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +54,34 @@
 		FA7084362DD75C05007B4840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPageViewController.swift; sourceTree = "<group>"; };
 		FA70843E2DD75C39007B4840 /* TopUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpPageView.swift; sourceTree = "<group>"; };
-		FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		FA7084402DD75C4D007B4840 /* CustomSegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControlView.swift; sourceTree = "<group>"; };
 		FA7084422DD75CD6007B4840 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FA7084462DD75FD4007B4840 /* PulsaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsaView.swift; sourceTree = "<group>"; };
+		FA7084482DD76643007B4840 /* DataPackageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageView.swift; sourceTree = "<group>"; };
+		FA70844C2DD76939007B4840 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA7084522DD77114007B4840 /* PulsaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsaModel.swift; sourceTree = "<group>"; };
+		FA7084542DD7711C007B4840 /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
+		FA7084632DD78680007B4840 /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
+		FA7084652DD7871A007B4840 /* PulsaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsaAPI.swift; sourceTree = "<group>"; };
+		FA70846C2DD78850007B4840 /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
+		FA7084742DD85514007B4840 /* TransactionPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPageView.swift; sourceTree = "<group>"; };
+		FA7084762DD855A8007B4840 /* TransactionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPageViewController.swift; sourceTree = "<group>"; };
+		FA70847E2DD86589007B4840 /* VoucherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherAPI.swift; sourceTree = "<group>"; };
+		FA7085072DD8E3E2007B4840 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FA7085092DD8E42C007B4840 /* PulsaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsaViewController.swift; sourceTree = "<group>"; };
+		FA70850B2DD8E459007B4840 /* VoucherPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherPageViewController.swift; sourceTree = "<group>"; };
+		FA70850D2DD8EB3D007B4840 /* DataPackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageViewController.swift; sourceTree = "<group>"; };
+		FA7085132DD97DA9007B4840 /* VoucherPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherPageView.swift; sourceTree = "<group>"; };
+		FA8D3F2D2DDAD248008A5670 /* StatusPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPageModel.swift; sourceTree = "<group>"; };
+		FA8D3F2F2DDAD25F008A5670 /* StatusPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPageAPI.swift; sourceTree = "<group>"; };
+		FA8D3F312DDB79EA008A5670 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		FA8D3F332DDBFD6E008A5670 /* VoucherListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherListCell.swift; sourceTree = "<group>"; };
+		FA8D3F352DDC0A05008A5670 /* TransactionSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSuccessView.swift; sourceTree = "<group>"; };
+		FA8D3F372DDC0A11008A5670 /* TransactionSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSuccessViewController.swift; sourceTree = "<group>"; };
+		FA8D3F392DDC5FCF008A5670 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		FA8D3F3B2DDC6935008A5670 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		FA8D3F3D2DDC6E55008A5670 /* PaymentDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailRowView.swift; sourceTree = "<group>"; };
+		FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +116,186 @@
 			children = (
 				FA7084282DD75C04007B4840 /* AppDelegate.swift */,
 				FA70842A2DD75C04007B4840 /* SceneDelegate.swift */,
-				FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */,
-				FA70843E2DD75C39007B4840 /* TopUpPageView.swift */,
-				FA7084422DD75CD6007B4840 /* UIView+Extension.swift */,
-				FA7084402DD75C4D007B4840 /* CustomSegmentedControl.swift */,
+				FA7084882DD868C5007B4840 /* Pages */,
+				FA70844E2DD76BB0007B4840 /* Extensions */,
+				FA70846B2DD787F0007B4840 /* Helpers */,
 				FA70842E2DD75C04007B4840 /* Main.storyboard */,
 				FA7084312DD75C05007B4840 /* Assets.xcassets */,
 				FA7084332DD75C05007B4840 /* LaunchScreen.storyboard */,
 				FA7084362DD75C05007B4840 /* Info.plist */,
 			);
 			path = PulsaApp;
+			sourceTree = "<group>";
+		};
+		FA70844E2DD76BB0007B4840 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F3B2DDC6935008A5670 /* UILabel+Extension.swift */,
+				FA8D3F312DDB79EA008A5670 /* UIAlertController+Extension.swift */,
+				FA7084422DD75CD6007B4840 /* UIView+Extension.swift */,
+				FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */,
+				FA70844C2DD76939007B4840 /* UIViewController+Extension.swift */,
+				FA7085072DD8E3E2007B4840 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA7084672DD78757007B4840 /* TopUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084682DD7875F007B4840 /* Models */,
+				FA7084692DD78763007B4840 /* Views */,
+				FA70846A2DD7876A007B4840 /* Controllers */,
+			);
+			path = TopUpPage;
+			sourceTree = "<group>";
+		};
+		FA7084682DD7875F007B4840 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084652DD7871A007B4840 /* PulsaAPI.swift */,
+				FA7084522DD77114007B4840 /* PulsaModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA7084692DD78763007B4840 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084482DD76643007B4840 /* DataPackageView.swift */,
+				FA70843E2DD75C39007B4840 /* TopUpPageView.swift */,
+				FA7084462DD75FD4007B4840 /* PulsaView.swift */,
+				FA7084402DD75C4D007B4840 /* CustomSegmentedControlView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA70846A2DD7876A007B4840 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA70843C2DD75C30007B4840 /* TopUpPageViewController.swift */,
+				FA7085092DD8E42C007B4840 /* PulsaViewController.swift */,
+				FA70850D2DD8EB3D007B4840 /* DataPackageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA70846B2DD787F0007B4840 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F392DDC5FCF008A5670 /* NumberFormatter.swift */,
+				FA70846C2DD78850007B4840 /* JSONFormatter.swift */,
+				FA7084632DD78680007B4840 /* PriceFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA7084802DD865A1007B4840 /* TransactionPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084812DD865A9007B4840 /* Models */,
+				FA7084822DD865AD007B4840 /* Views */,
+				FA7084832DD865B0007B4840 /* Controllers */,
+			);
+			path = TransactionPage;
+			sourceTree = "<group>";
+		};
+		FA7084812DD865A9007B4840 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA70847E2DD86589007B4840 /* VoucherAPI.swift */,
+				FA7084542DD7711C007B4840 /* VoucherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA7084822DD865AD007B4840 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084742DD85514007B4840 /* TransactionPageView.swift */,
+				FA8D3F3D2DDC6E55008A5670 /* PaymentDetailRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA7084832DD865B0007B4840 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA7084762DD855A8007B4840 /* TransactionPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA7084882DD868C5007B4840 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F412DDC6EC2008A5670 /* TransactionSuccessPage */,
+				FA70850F2DD97D5D007B4840 /* VoucherPage */,
+				FA7084672DD78757007B4840 /* TopUpPage */,
+				FA7084802DD865A1007B4840 /* TransactionPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		FA70850F2DD97D5D007B4840 /* VoucherPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA7085112DD97D67007B4840 /* Views */,
+				FA7085102DD97D62007B4840 /* Controllers */,
+			);
+			path = VoucherPage;
+			sourceTree = "<group>";
+		};
+		FA7085102DD97D62007B4840 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA70850B2DD8E459007B4840 /* VoucherPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA7085112DD97D67007B4840 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7085132DD97DA9007B4840 /* VoucherPageView.swift */,
+				FA8D3F332DDBFD6E008A5670 /* VoucherListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA8D3F412DDC6EC2008A5670 /* TransactionSuccessPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F442DDC6EDC008A5670 /* Controllers */,
+				FA8D3F432DDC6ED6008A5670 /* Views */,
+				FA8D3F422DDC6ECB008A5670 /* Models */,
+			);
+			path = TransactionSuccessPage;
+			sourceTree = "<group>";
+		};
+		FA8D3F422DDC6ECB008A5670 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F2D2DDAD248008A5670 /* StatusPageModel.swift */,
+				FA8D3F2F2DDAD25F008A5670 /* StatusPageAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA8D3F432DDC6ED6008A5670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F352DDC0A05008A5670 /* TransactionSuccessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA8D3F442DDC6EDC008A5670 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D3F372DDC0A11008A5670 /* TransactionSuccessViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,12 +369,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA70850A2DD8E42C007B4840 /* PulsaViewController.swift in Sources */,
+				FA8D3F322DDB79EA008A5670 /* UIAlertController+Extension.swift in Sources */,
+				FA8D3F3C2DDC6935008A5670 /* UILabel+Extension.swift in Sources */,
+				FA70844D2DD76939007B4840 /* UIViewController+Extension.swift in Sources */,
+				FA8D3F382DDC0A11008A5670 /* TransactionSuccessViewController.swift in Sources */,
+				FA70847F2DD86589007B4840 /* VoucherAPI.swift in Sources */,
+				FA7084532DD77114007B4840 /* PulsaModel.swift in Sources */,
+				FA7084752DD85514007B4840 /* TransactionPageView.swift in Sources */,
+				FA8D3F3E2DDC6E55008A5670 /* PaymentDetailRowView.swift in Sources */,
 				FA70843D2DD75C30007B4840 /* TopUpPageViewController.swift in Sources */,
+				FA70850C2DD8E459007B4840 /* VoucherPageViewController.swift in Sources */,
+				FA7084492DD76643007B4840 /* DataPackageView.swift in Sources */,
 				FA7084432DD75CD6007B4840 /* UIView+Extension.swift in Sources */,
+				FA7084662DD7871A007B4840 /* PulsaAPI.swift in Sources */,
+				FA70850E2DD8EB3D007B4840 /* DataPackageViewController.swift in Sources */,
+				FA7084472DD75FD4007B4840 /* PulsaView.swift in Sources */,
+				FA7084552DD7711C007B4840 /* VoucherModel.swift in Sources */,
+				FA7084772DD855A8007B4840 /* TransactionPageViewController.swift in Sources */,
+				FA8D3F2E2DDAD248008A5670 /* StatusPageModel.swift in Sources */,
+				FA70846D2DD78850007B4840 /* JSONFormatter.swift in Sources */,
+				FA7085082DD8E3E2007B4840 /* UIImageView+Extension.swift in Sources */,
+				FA8D3F302DDAD25F008A5670 /* StatusPageAPI.swift in Sources */,
 				FA70843F2DD75C39007B4840 /* TopUpPageView.swift in Sources */,
+				FA8D3F342DDBFD6E008A5670 /* VoucherListCell.swift in Sources */,
 				FA7084292DD75C04007B4840 /* AppDelegate.swift in Sources */,
+				FA7085142DD97DA9007B4840 /* VoucherPageView.swift in Sources */,
+				FA8D3F402DDC6E77008A5670 /* Notifications+Extension.swift in Sources */,
+				FA7084642DD78680007B4840 /* PriceFormatter.swift in Sources */,
 				FA70842B2DD75C04007B4840 /* SceneDelegate.swift in Sources */,
-				FA7084412DD75C4D007B4840 /* CustomSegmentedControl.swift in Sources */,
+				FA7084412DD75C4D007B4840 /* CustomSegmentedControlView.swift in Sources */,
+				FA8D3F3A2DDC5FCF008A5670 /* NumberFormatter.swift in Sources */,
+				FA8D3F362DDC0A05008A5670 /* TransactionSuccessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
