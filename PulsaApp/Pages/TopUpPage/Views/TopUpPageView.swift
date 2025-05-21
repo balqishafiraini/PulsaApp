@@ -48,11 +48,7 @@ class TopUpPageView: UIView {
         addSubview(stackView)
         stackView.addArrangedSubview(customSegmentedControl)
         stackView.addArrangedSubview(containerView)
-        stackView.anchor(
-            top: safeAreaLayoutGuide.topAnchor,
-            left: leftAnchor,
-            bottom: bottomAnchor,
-            right: rightAnchor)
+        stackView.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
         
         customSegmentedControl.anchor(height: 50)
         customSegmentedControl.delegate = self

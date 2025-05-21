@@ -26,14 +26,7 @@ class DataPackageView: UIView {
     }
         
     private func setupViews() {
-        addSubview(mobileNumberLabel)
-        
-        mobileNumberLabel.anchor(
-            top: topAnchor,
-            left: leftAnchor,
-            bottom: bottomAnchor,
-            right: rightAnchor)
-        
+        print("Data Package view coming soon")
     }
 }
 

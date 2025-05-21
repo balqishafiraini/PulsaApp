@@ -43,7 +43,6 @@
 		FA8D3F3E2DDC6E55008A5670 /* PaymentDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F3D2DDC6E55008A5670 /* PaymentDetailRowView.swift */; };
 		FA8D3F402DDC6E77008A5670 /* Notifications+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */; };
 		FA8D3F462DDC74A1008A5670 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F452DDC74A1008A5670 /* UIColor+Extension.swift */; };
-		FA8D3F482DDD9D7D008A5670 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D3F472DDD9D7D008A5670 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +84,6 @@
 		FA8D3F3D2DDC6E55008A5670 /* PaymentDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailRowView.swift; sourceTree = "<group>"; };
 		FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Extension.swift"; sourceTree = "<group>"; };
 		FA8D3F452DDC74A1008A5670 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		FA8D3F472DDD9D7D008A5670 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 				FA7084422DD75CD6007B4840 /* UIView+Extension.swift */,
 				FA8D3F452DDC74A1008A5670 /* UIColor+Extension.swift */,
 				FA8D3F3F2DDC6E77008A5670 /* Notifications+Extension.swift */,
-				FA8D3F472DDD9D7D008A5670 /* String+Extension.swift */,
 				FA70844C2DD76939007B4840 /* UIViewController+Extension.swift */,
 				FA7085072DD8E3E2007B4840 /* UIImageView+Extension.swift */,
 			);
@@ -383,7 +380,6 @@
 				FA8D3F382DDC0A11008A5670 /* TransactionSuccessViewController.swift in Sources */,
 				FA70847F2DD86589007B4840 /* VoucherAPI.swift in Sources */,
 				FA7084532DD77114007B4840 /* PulsaModel.swift in Sources */,
-				FA8D3F482DDD9D7D008A5670 /* String+Extension.swift in Sources */,
 				FA7084752DD85514007B4840 /* TransactionPageView.swift in Sources */,
 				FA8D3F3E2DDC6E55008A5670 /* PaymentDetailRowView.swift in Sources */,
 				FA70843D2DD75C30007B4840 /* TopUpPageViewController.swift in Sources */,

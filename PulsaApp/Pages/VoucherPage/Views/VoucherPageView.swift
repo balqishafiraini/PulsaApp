@@ -13,7 +13,6 @@ protocol VoucherPageViewDelegate: AnyObject {
 }
 
 class VoucherPageView: UIView {
-
     var vouchers: [VoucherItems] = [] {
         didSet {
             tableView.reloadData()
@@ -22,7 +21,7 @@ class VoucherPageView: UIView {
 
     weak var delegate: VoucherPageViewDelegate?
 
-    private let tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
         table.showsVerticalScrollIndicator = false
@@ -41,10 +40,7 @@ class VoucherPageView: UIView {
 
     private func setupTableView() {
         addSubview(tableView)
-        tableView.anchor(top: safeAreaLayoutGuide.topAnchor,
-                         left: leftAnchor,
-                         bottom: bottomAnchor,
-                         right: rightAnchor)
+        tableView.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -58,7 +54,9 @@ extension VoucherPageView: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: VoucherListCell.identifier, for: indexPath) as! VoucherListCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: VoucherListCell.identifier, for: indexPath) as? VoucherListCell else {
+            return UITableViewCell()
+        }
         let voucher = vouchers[indexPath.row]
         cell.configure(with: voucher)
         cell.onUseButtonTapped = { [weak self] in

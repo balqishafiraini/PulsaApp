@@ -48,7 +48,7 @@ class TransactionPageView: UIView {
         return view
     }()
     
-    private let operatorLogoImageView: UIImageView = {
+    private lazy var operatorLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "provider")
@@ -402,31 +402,23 @@ class TransactionPageView: UIView {
         activeVoucherContainerView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         
         addSubview(pinKredivoContainerView)
-        pinKredivoContainerView.anchor(top: sectionVoucherContainerView.bottomAnchor, left: leftAnchor, right: rightAnchor,
-                                       paddingTop: 20)
+        pinKredivoContainerView.anchor(top: sectionVoucherContainerView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 20)
         
         pinKredivoContainerView.addSubview(pinKredivoLabel)
-        pinKredivoLabel.anchor(top: pinKredivoContainerView.topAnchor, left: pinKredivoContainerView.leftAnchor,
-                               paddingTop: 16, paddingLeft: 16)
+        pinKredivoLabel.anchor(top: pinKredivoContainerView.topAnchor, left: pinKredivoContainerView.leftAnchor, paddingTop: 16, paddingLeft: 16)
         
         pinKredivoContainerView.addSubview(pinTextField)
-        pinTextField.anchor(top: pinKredivoLabel.bottomAnchor, left: pinKredivoContainerView.leftAnchor,
-                            right: pinKredivoContainerView.rightAnchor, paddingTop: 10,
-                            paddingLeft: 16, paddingRight: 16, height: 44)
+        pinTextField.anchor(top: pinKredivoLabel.bottomAnchor, left: pinKredivoContainerView.leftAnchor, right: pinKredivoContainerView.rightAnchor, paddingTop: 10, paddingLeft: 16, paddingRight: 16, height: 44)
         
         pinTextField.addSubview(showPinButton)
         showPinButton.anchor(right: pinTextField.rightAnchor, paddingRight: 12, width: 30, height: 24)
         showPinButton.centerY(inView: pinTextField)
         
         pinKredivoContainerView.addSubview(pinErrorMessageLabel)
-        pinErrorMessageLabel.anchor(top: pinTextField.bottomAnchor, left: pinKredivoContainerView.leftAnchor,
-                                    right: pinKredivoContainerView.rightAnchor, paddingTop: 4,
-                                    paddingLeft: 16, paddingRight: 16)
+        pinErrorMessageLabel.anchor(top: pinTextField.bottomAnchor, left: pinKredivoContainerView.leftAnchor, right: pinKredivoContainerView.rightAnchor, paddingTop: 4, paddingLeft: 16, paddingRight: 16)
         
         pinKredivoContainerView.addSubview(termsAndConditionsLabel)
-        termsAndConditionsLabel.anchor(top: pinErrorMessageLabel.bottomAnchor, left: pinKredivoContainerView.leftAnchor,
-                                       bottom: pinKredivoContainerView.bottomAnchor, right: pinKredivoContainerView.rightAnchor,
-                                       paddingTop: 10, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
+        termsAndConditionsLabel.anchor(top: pinErrorMessageLabel.bottomAnchor, left: pinKredivoContainerView.leftAnchor, bottom: pinKredivoContainerView.bottomAnchor, right: pinKredivoContainerView.rightAnchor, paddingTop: 10, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
         
         addSubview(payButton)
         payButton.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 60)

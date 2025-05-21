@@ -138,89 +138,38 @@ class PulsaView: UIView {
         backgroundColor = .systemGray5
         
         addSubview(headerContainerView)
-        headerContainerView.anchor(
-            top: safeAreaLayoutGuide.topAnchor,
-            left: leftAnchor,
-            right: rightAnchor,
-            height: 80
-        )
+        headerContainerView.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, height: 80)
 
         headerContainerView.addSubview(iconImage)
-        iconImage.anchor(
-            left: headerContainerView.leftAnchor,
-            paddingLeft: 16,
-            width: 40,
-            height: 40
-        )
+        iconImage.anchor(left: headerContainerView.leftAnchor, paddingLeft: 16, width: 40,  height: 40)
         iconImage.centerY(inView: headerContainerView)
 
         headerContainerView.addSubview(contactButton)
-        contactButton.anchor(
-            right: headerContainerView.rightAnchor,
-            paddingRight: 16,
-            width: 20,
-            height: 20
-        )
+        contactButton.anchor(right: headerContainerView.rightAnchor, paddingRight: 16, width: 20, height: 20)
         contactButton.centerY(inView: headerContainerView)
 
         headerContainerView.addSubview(clearButton)
-        clearButton.anchor(
-            right: contactButton.leftAnchor,
-            paddingRight: 8,
-            width: 20,
-            height: 20
-        )
+        clearButton.anchor(right: contactButton.leftAnchor, paddingRight: 8, width: 20, height: 20)
         clearButton.centerY(inView: headerContainerView)
 
         headerContainerView.addSubview(mobileNumberLabel)
-        mobileNumberLabel.anchor(
-            top: headerContainerView.topAnchor,
-            left: iconImage.rightAnchor,
-            paddingTop: 8,
-            paddingLeft: 12
-        )
+        mobileNumberLabel.anchor(top: headerContainerView.topAnchor, left: iconImage.rightAnchor, paddingTop: 8, paddingLeft: 12)
 
         headerContainerView.addSubview(phoneNumberTextField)
-        phoneNumberTextField.anchor(
-            top: mobileNumberLabel.bottomAnchor,
-            left: iconImage.rightAnchor,
-            right: clearButton.leftAnchor,
-            paddingLeft: 12,
-            paddingRight: 4,
-            height: 40
-        )
+        phoneNumberTextField.anchor(top: mobileNumberLabel.bottomAnchor, left: iconImage.rightAnchor, right: clearButton.leftAnchor, paddingLeft: 12, paddingRight: 4, height: 40)
         
         phoneNumberTextField.addSubview(textFieldBottomBorder)
-        textFieldBottomBorder.anchor(
-            left: phoneNumberTextField.leftAnchor,
-            bottom: phoneNumberTextField.bottomAnchor,
-            right: clearButton.rightAnchor,
-            height: 1)
+        textFieldBottomBorder.anchor(left: phoneNumberTextField.leftAnchor, bottom: phoneNumberTextField.bottomAnchor, right: clearButton.rightAnchor, height: 1)
         
         addSubview(scrollView)
-        scrollView.anchor(
-            top: headerContainerView.bottomAnchor,
-            left: leftAnchor,
-            bottom: safeAreaLayoutGuide.bottomAnchor,
-            right: rightAnchor,
-            paddingTop: 10
-        )
+        scrollView.anchor(top: headerContainerView.bottomAnchor, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, paddingTop: 10)
 
         scrollView.addSubview(pulsaOptionsStackView)
-        pulsaOptionsStackView.anchor(
-            top: scrollView.topAnchor,
-            left: scrollView.leftAnchor,
-            right: scrollView.rightAnchor
-        )
+        pulsaOptionsStackView.anchor(top: scrollView.topAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor)
         pulsaOptionsStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         
         scrollView.addSubview(promoContainerView)
-        promoContainerView.anchor(
-            top: pulsaOptionsStackView.bottomAnchor,
-            left: scrollView.leftAnchor,
-            right: scrollView.rightAnchor,
-            paddingTop: 10
-        )
+        promoContainerView.anchor(top: pulsaOptionsStackView.bottomAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor, paddingTop: 10)
         
         promoContainerView.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.bottomAnchor).isActive = true
     }
@@ -229,33 +178,12 @@ class PulsaView: UIView {
         promoContainerView.addSubview(promosLabel)
         promoContainerView.addSubview(voucherScrollView)
 
-        promosLabel.anchor(
-            top: promoContainerView.topAnchor,
-            left: promoContainerView.leftAnchor,
-            right: promoContainerView.rightAnchor,
-            paddingTop: 16,
-            paddingLeft: 16,
-            paddingRight: 16
-        )
+        promosLabel.anchor(top: promoContainerView.topAnchor, left: promoContainerView.leftAnchor, right: promoContainerView.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
 
-        voucherScrollView.anchor(
-            top: promosLabel.bottomAnchor,
-            left: promoContainerView.leftAnchor,
-            bottom: promoContainerView.bottomAnchor,
-            right: promoContainerView.rightAnchor,
-            paddingTop: 12,
-            paddingLeft: 16,
-            paddingBottom: 16,
-            paddingRight: 16
-        )
+        voucherScrollView.anchor(top: promosLabel.bottomAnchor, left: promoContainerView.leftAnchor, bottom: promoContainerView.bottomAnchor, right: promoContainerView.rightAnchor, paddingTop: 12, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
         
         voucherScrollView.addSubview(voucherStackView)
-        voucherStackView.anchor(
-            top: voucherScrollView.topAnchor,
-            left: voucherScrollView.leftAnchor,
-            bottom: voucherScrollView.bottomAnchor,
-            right: voucherScrollView.rightAnchor
-        )
+        voucherStackView.anchor(top: voucherScrollView.topAnchor, left: voucherScrollView.leftAnchor, bottom: voucherScrollView.bottomAnchor, right: voucherScrollView.rightAnchor)
         voucherStackView.heightAnchor.constraint(equalTo: voucherScrollView.heightAnchor).isActive = true
     }
 
@@ -351,34 +279,14 @@ class PulsaView: UIView {
         containerView.addSubview(amountLabel)
         containerView.addSubview(button)
 
-        nominalLabel.anchor(
-            top: containerView.topAnchor,
-            left: containerView.leftAnchor,
-            paddingTop: 12,
-            paddingLeft: 16
-        )
+        nominalLabel.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, paddingTop: 12, paddingLeft: 16)
 
-        amountLabel.anchor(
-            top: nominalLabel.bottomAnchor,
-            left: containerView.leftAnchor,
-            paddingTop: 4,
-            paddingLeft: 16
-        )
+        amountLabel.anchor(top: nominalLabel.bottomAnchor, left: containerView.leftAnchor, paddingTop: 4, paddingLeft: 16)
 
-        button.anchor(
-            right: containerView.rightAnchor,
-            paddingRight: 16,
-            width: 120,
-            height: 44
-        )
+        button.anchor(right: containerView.rightAnchor, paddingRight: 16, width: 120, height: 44)
         button.centerY(inView: containerView)
             
-        separator.anchor(
-            left: containerView.leftAnchor,
-            bottom: containerView.bottomAnchor,
-            right: containerView.rightAnchor,
-            height: 1.0
-        )
+        separator.anchor(left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, height: 1.0)
 
         return containerView
     }

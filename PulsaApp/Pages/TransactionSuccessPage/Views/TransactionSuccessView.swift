@@ -10,7 +10,7 @@ import UIKit
 
 class TransactionSuccessView: UIView {
         
-    private let detailPesananContainer: UIView = {
+    private lazy var detailPesananContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1
@@ -19,7 +19,7 @@ class TransactionSuccessView: UIView {
         return view
     }()
     
-    private let detailPembayaranContainer: UIView = {
+    private lazy var detailPembayaranContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1
@@ -28,14 +28,14 @@ class TransactionSuccessView: UIView {
         return view
     }()
     
-    private let contactContainer: UIView = {
+    private lazy var contactContainer: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.systemGray6
         view.layer.cornerRadius = 8
         return view
     }()
         
-    private let detailPesananHeaderLabel: PaddedLabel = {
+    private lazy var detailPesananHeaderLabel: PaddedLabel = {
         let label = PaddedLabel()
         label.text = "Detail Pesanan"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
@@ -46,7 +46,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let detailPembayaranHeaderLabel: PaddedLabel = {
+    private lazy var detailPembayaranHeaderLabel: PaddedLabel = {
         let label = PaddedLabel()
         label.text = "Detail Pembayaran"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
@@ -57,19 +57,19 @@ class TransactionSuccessView: UIView {
         return label
     }()
         
-    private let dividerOrder: UIView = {
+    private lazy var dividerOrder: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
         return view
     }()
     
-    private let dividerPayment: UIView = {
+    private lazy var dividerPayment: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
         return view
     }()
         
-    private let logoImageView: UIImageView = {
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "provider")
@@ -81,14 +81,14 @@ class TransactionSuccessView: UIView {
         return imageView
     }()
     
-    private let phoneNumberLabel: UILabel = {
+    private lazy var phoneNumberLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         label.textColor = .darkGray
         return label
     }()
     
-    private let statusTitleLabel: UILabel = {
+    private lazy var statusTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Status"
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -96,7 +96,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let statusValueLabel: UILabel = {
+    private lazy var statusValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor.systemGreen
@@ -104,7 +104,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let orderIdTitleLabel: UILabel = {
+    private lazy var orderIdTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Order ID"
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -112,7 +112,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let orderIdValueLabel: UILabel = {
+    private lazy var orderIdValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .gray
@@ -120,14 +120,14 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let itemListStackView: UIStackView = {
+    private lazy var itemListStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
         return stack
     }()
     
-    private let subtotalTitleLabel: UILabel = {
+    private lazy var subtotalTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Subtotal"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -135,7 +135,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let subtotalValueLabel: UILabel = {
+    private lazy var subtotalValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .darkGray
@@ -143,7 +143,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let payInTitleLabel: UILabel = {
+    private lazy var payInTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Bayar dalam 30 hari"
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
@@ -151,7 +151,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let payInValueLabel: UILabel = {
+    private lazy var payInValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textColor = .systemOrange
@@ -159,7 +159,7 @@ class TransactionSuccessView: UIView {
         return label
     }()
     
-    private let contactLabel: UILabel = {
+    private lazy var contactLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .gray

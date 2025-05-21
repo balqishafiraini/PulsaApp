@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let dashboardVC = TopUpPageViewController()
-        let navController = UINavigationController(rootViewController: dashboardVC) // <--- THIS IS CORRECT
+        let navController = UINavigationController(rootViewController: dashboardVC)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }

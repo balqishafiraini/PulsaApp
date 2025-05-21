@@ -13,7 +13,7 @@ class VoucherListCell: UITableViewCell {
 
     var onUseButtonTapped: (() -> Void)?
 
-    private let containerCard: UIView = {
+    private lazy var containerCard: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 8
@@ -22,7 +22,7 @@ class VoucherListCell: UITableViewCell {
         return view
     }()
 
-    private let voucherImageView: UIImageView = {
+    private lazy var voucherImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
@@ -31,7 +31,7 @@ class VoucherListCell: UITableViewCell {
         return iv
     }()
 
-    private let newLabel: PaddedLabel = {
+    private lazy var newLabel: PaddedLabel = {
         let label = PaddedLabel()
         label.text = "Baru"
         label.backgroundColor = UIColor.white
@@ -40,20 +40,20 @@ class VoucherListCell: UITableViewCell {
         return label
     }()
 
-    private let nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = .black
         return label
     }()
 
-    private let expiryLabel: UILabel = {
+    private lazy var expiryLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 13)
         return label
     }()
 
-    private let useButton: UIButton = {
+    private lazy var useButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Pakai", for: .normal)
         button.setTitleColor(.white, for: .normal)
