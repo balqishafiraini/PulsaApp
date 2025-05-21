@@ -450,11 +450,10 @@ class TransactionPageView: UIView {
     func updateProductDetails() {
         guard let product = selectedProduct, let number = phoneNumber else { return }
         
-        phoneNumberDisplayLabel.text = formatPhoneNumberForDisplay(number)
+        phoneNumberDisplayLabel.text = number.formattedPhoneNumber(convertTo62: false)
         
-        let formattedPhoneNumber = formatPhoneNumberForDisplay(number)
-        pulsaNominalRow.configure(title: "\(product.provider) \(product.formattedPrice) (+\(formattedPhoneNumber))",
-                                  value: product.formattedPrice)
+        let formattedPhoneNumber = number.formattedPhoneNumber(shouldSlice: false)
+        pulsaNominalRow.configure(title: "\(product.provider) \(product.formattedPrice) (+\(formattedPhoneNumber))", value: product.formattedPrice)
         
         var currentDiscount: Double = 0.0
         if let voucher = appliedVoucher {
@@ -479,34 +478,6 @@ class TransactionPageView: UIView {
                                 value: PriceFormatter.format(price: subtotal),
                                 valueColor: .orange)
     }
-    
-    private func formatPhoneNumberForDisplay(_ number: String) -> String {
-        if number.isEmpty {
-            return "No phone number"
-        }
-        
-        var formattedNumber = number
-        
-        if formattedNumber.hasPrefix("0") {
-            formattedNumber.removeFirst()
-            formattedNumber = "62" + formattedNumber
-        } else if !formattedNumber.hasPrefix("62") {
-            formattedNumber = "62" + formattedNumber
-        }
-        
-        if formattedNumber.count > 4 {
-            formattedNumber.insert(" ", at: formattedNumber.index(formattedNumber.startIndex, offsetBy: 4))
-        }
-        if formattedNumber.count > 9 {
-            let secondSpaceIndex = formattedNumber.index(formattedNumber.startIndex, offsetBy: 9)
-            if secondSpaceIndex < formattedNumber.endIndex {
-                formattedNumber.insert(" ", at: secondSpaceIndex)
-            }
-        }
-        
-        return formattedNumber
-    }
-    
     
     @objc private func voucherButtonTapped() {
         print("Voucher button tapped! Notifying delegate.")

@@ -302,4 +302,9 @@ class TransactionSuccessView: UIView {
         
         return container
     }
+    
+    func setPhoneNumber(_ number: String) {
+        phoneNumberLabel.text = number.formattedPhoneNumber(shouldSlice: true, convertTo62: false)
+    }
+
 }

@@ -65,15 +65,16 @@ extension TransactionPageViewController: TransactionPageViewDelegate {
     }
 
     func transactionPageViewDidRequestPayment(for productCode: String, phoneNumber: String, pin: String) {
-            let successVC = TransactionSuccessViewController()
-            
-            if let response = StatusPageAPI.shared.loadPulsaData() {
-                successVC.transactionStatusResponse = response
-                navigationController?.pushViewController(successVC, animated: true)
-            } else {
-                showAlert(title: "Error", message: "Failed to load transaction data")
-            }
+        let successVC = TransactionSuccessViewController()
+        successVC.phoneNumber = phoneNumber
+
+        if let response = StatusPageAPI.shared.loadPulsaData() {
+            successVC.transactionStatusResponse = response
+            navigationController?.pushViewController(successVC, animated: true)
+        } else {
+            showAlert(title: "Error", message: "Failed to load transaction data")
         }
+    }
 
 
     func transactionPageViewDidEncounterPinError(message: String) {

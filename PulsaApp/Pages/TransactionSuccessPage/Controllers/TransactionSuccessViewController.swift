@@ -11,7 +11,9 @@ import UIKit
 class TransactionSuccessViewController: UIViewController {
 
     private let successView = TransactionSuccessView()
+    private let pulsaView = PulsaView()
     var transactionStatusResponse: TransactionStatusResponse?
+    var phoneNumber: String?
 
     override func loadView() {
         view = successView
@@ -22,6 +24,9 @@ class TransactionSuccessViewController: UIViewController {
         setupNavigationTitle("Detail Pembayaran")
         setupNavigationItem()
         loadTransactionData()
+        if let phoneNumber = phoneNumber {
+            successView.setPhoneNumber(phoneNumber)
+        }
         successView.okButton.addTarget(self, action: #selector(okButtonTapped), for: .touchUpInside)
     }
 
@@ -49,8 +54,10 @@ class TransactionSuccessViewController: UIViewController {
     private func navigateBackToTopUp() {
         if let nav = navigationController {
             for vc in nav.viewControllers {
-                if vc is TopUpPageViewController {
-                    nav.popToViewController(vc, animated: true)
+                if let topUpVC = vc as? TopUpPageViewController {
+                    topUpVC.resetPhoneNumberInPulsaVC()
+                    
+                    nav.popToViewController(topUpVC, animated: true)
                     return
                 }
             }
@@ -59,4 +66,5 @@ class TransactionSuccessViewController: UIViewController {
             dismiss(animated: true)
         }
     }
+
 }

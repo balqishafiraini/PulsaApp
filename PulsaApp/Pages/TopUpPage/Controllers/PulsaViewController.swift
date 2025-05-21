@@ -46,4 +46,8 @@ extension PulsaViewController: PulsaViewDelegate {
         let voucherListVC = VoucherPageViewController()
         navigationController?.pushViewController(voucherListVC, animated: true)
     }
+    
+    func resetPhoneNumber() {
+        pulsaView.resetPhoneNumber()
+    }
 }

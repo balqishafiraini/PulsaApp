@@ -92,5 +92,9 @@ extension TopUpPageViewController: PulsaViewDelegate {
             print("ERROR: Navigation controller is nil. Cannot push view controller.")
         }
     }
+    
+    func resetPhoneNumberInPulsaVC() {
+        pulsaVC.resetPhoneNumber()
+    }
 
 }

@@ -382,6 +382,10 @@ class PulsaView: UIView {
 
         return containerView
     }
+    
+    func resetPhoneNumber() {
+        phoneNumberTextField.text = ""
+    }
 
     @objc private func pulsaButtonTapped(_ sender: UIButton) {
         let nominal = sender.tag
