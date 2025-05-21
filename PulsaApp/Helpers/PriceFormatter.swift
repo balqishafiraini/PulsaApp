@@ -9,7 +9,6 @@ import Foundation
 
 struct PriceFormatter {
     static func format(from string: String) -> String {
-        // Hilangkan titik desimal jika ada (contoh: "7.500" → "7500")
         let sanitized = string.replacingOccurrences(of: ".", with: "")
         let value = Double(sanitized) ?? 0
         return format(price: value)

@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Product Response Model
 struct ProductResponse: Codable {
     let status: String
     let message: String

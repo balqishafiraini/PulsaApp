@@ -31,9 +31,10 @@ class VoucherListCell: UITableViewCell {
         return iv
     }()
 
-    private let newLabel: UILabel = {
-        let label = UILabel()
+    private let newLabel: PaddedLabel = {
+        let label = PaddedLabel()
         label.text = "Baru"
+        label.backgroundColor = UIColor.white
         label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .red
         return label
@@ -49,7 +50,6 @@ class VoucherListCell: UITableViewCell {
     private let expiryLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 13)
-        label.textColor = .gray
         return label
     }()
 
@@ -86,7 +86,7 @@ class VoucherListCell: UITableViewCell {
 
         voucherImageView.anchor(top: containerCard.topAnchor, left: containerCard.leftAnchor, right: containerCard.rightAnchor, height: 90)
 
-        newLabel.anchor(top: voucherImageView.topAnchor, left: voucherImageView.leftAnchor, paddingTop: 6, paddingLeft: 6)
+        newLabel.anchor(top: voucherImageView.topAnchor, left: voucherImageView.leftAnchor, paddingTop: 6)
 
         nameLabel.anchor(top: voucherImageView.bottomAnchor, left: containerCard.leftAnchor, paddingTop: 8, paddingLeft: 12)
 
@@ -98,8 +98,22 @@ class VoucherListCell: UITableViewCell {
     func configure(with voucher: VoucherItems) {
         voucherImageView.loadImage(from: voucher.imageUrl)
         nameLabel.text = voucher.name
-        expiryLabel.text = "Berlaku hingga \(voucher.formattedEndDate)"
+
+        let regularText = "Berlaku hingga "
+        let boldText = voucher.formattedEndDate
+
+        let attributedText = NSMutableAttributedString(
+            string: regularText,
+            attributes: [.font: UIFont.systemFont(ofSize: 13)]
+        )
+        let boldAttributedString = NSAttributedString(
+            string: boldText,
+            attributes: [.font: UIFont.boldSystemFont(ofSize: 13)]
+        )
+        attributedText.append(boldAttributedString)
+        expiryLabel.attributedText = attributedText
     }
+
 
     @objc private func useButtonTapped() {
         onUseButtonTapped?()

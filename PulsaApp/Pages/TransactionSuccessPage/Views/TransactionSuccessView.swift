@@ -9,21 +9,13 @@ import Foundation
 import UIKit
 
 class TransactionSuccessView: UIView {
-    
-    // MARK: - Containers
-    
+        
     private let detailPesananContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.lightGray.cgColor
-        view.backgroundColor = .white // content background white
-        return view
-    }()
-    
-    private let detailPesananHeaderView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 0.95, green: 0.97, blue: 1, alpha: 1) // light blue header background
+        view.backgroundColor = .white
         return view
     }()
     
@@ -32,13 +24,7 @@ class TransactionSuccessView: UIView {
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.lightGray.cgColor
-        view.backgroundColor = .white // content background white
-        return view
-    }()
-    
-    private let detailPembayaranHeaderView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 0.95, green: 0.97, blue: 1, alpha: 1) // same light blue header background
+        view.backgroundColor = .white
         return view
     }()
     
@@ -48,9 +34,7 @@ class TransactionSuccessView: UIView {
         view.layer.cornerRadius = 8
         return view
     }()
-    
-    // MARK: - Headers
-    
+        
     private let detailPesananHeaderLabel: PaddedLabel = {
         let label = PaddedLabel()
         label.text = "Detail Pesanan"
@@ -72,9 +56,7 @@ class TransactionSuccessView: UIView {
         label.numberOfLines = 1
         return label
     }()
-    
-    // MARK: - Dividers
-    
+        
     private let dividerOrder: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
@@ -86,9 +68,7 @@ class TransactionSuccessView: UIView {
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4)
         return view
     }()
-    
-    // MARK: - Other UI elements
-    
+        
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -166,14 +146,14 @@ class TransactionSuccessView: UIView {
     private let payInTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Bayar dalam 30 hari"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium) // bigger font size
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textColor = .systemOrange
         return label
     }()
     
     private let payInValueLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium) // bigger font size to match title
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textColor = .systemOrange
         label.textAlignment = .right
         return label
@@ -202,9 +182,7 @@ class TransactionSuccessView: UIView {
         sv.showsVerticalScrollIndicator = false
         return sv
     }()
-    
-    // MARK: - Init
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -213,9 +191,7 @@ class TransactionSuccessView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Setup UI
-    
+        
     private func setupUI() {
         backgroundColor = .white
         
@@ -225,7 +201,6 @@ class TransactionSuccessView: UIView {
         scrollView.addSubview(contactContainer)
         addSubview(okButton)
 
-        // Pesanan container subviews
         detailPesananContainer.addSubview(detailPesananHeaderLabel)
         detailPesananContainer.addSubview(logoImageView)
         detailPesananContainer.addSubview(phoneNumberLabel)
@@ -235,7 +210,6 @@ class TransactionSuccessView: UIView {
         detailPesananContainer.addSubview(orderIdTitleLabel)
         detailPesananContainer.addSubview(orderIdValueLabel)
 
-        // Pembayaran container subviews
         detailPembayaranContainer.addSubview(detailPembayaranHeaderLabel)
         detailPembayaranContainer.addSubview(itemListStackView)
         detailPembayaranContainer.addSubview(dividerPayment)
@@ -244,14 +218,12 @@ class TransactionSuccessView: UIView {
         detailPembayaranContainer.addSubview(payInTitleLabel)
         detailPembayaranContainer.addSubview(payInValueLabel)
 
-        // Contact container subviews
         contactContainer.addSubview(contactLabel)
 
-        // Layout
         scrollView.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: okButton.topAnchor, right: rightAnchor)
         
         detailPesananContainer.anchor(top: scrollView.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
-        detailPesananHeaderLabel.anchor(top: detailPesananContainer.topAnchor, left: detailPesananContainer.leftAnchor, right: detailPesananContainer.rightAnchor, height: 40)
+        detailPesananHeaderLabel.anchor(top: detailPesananContainer.topAnchor, left: detailPesananContainer.leftAnchor, right: detailPesananContainer.rightAnchor, height: 50)
         logoImageView.anchor(top: detailPesananHeaderLabel.bottomAnchor, left: detailPesananContainer.leftAnchor, paddingTop: 16, paddingLeft: 16, width: 40, height: 40)
         phoneNumberLabel.centerY(inView: logoImageView)
         phoneNumberLabel.anchor(left: logoImageView.rightAnchor, right: detailPesananContainer.rightAnchor, paddingLeft: 12, paddingRight: 16)
@@ -282,10 +254,6 @@ class TransactionSuccessView: UIView {
         okButton.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 60)
     }
 
-
-    
-    // MARK: - Configure
-    
     func configure(with response: TransactionStatusResponse) {
         if let firstItem = response.transactionContext.itemList.first {
             phoneNumberLabel.text = firstItem.name
@@ -294,7 +262,6 @@ class TransactionSuccessView: UIView {
         statusValueLabel.text = response.status == "OK" ? "Transaksi Berhasil" : "Transaksi Gagal"
         orderIdValueLabel.text = response.transactionContext.orderId
         
-        // Clear previous items
         itemListStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
         for item in response.transactionContext.itemList {
@@ -302,9 +269,9 @@ class TransactionSuccessView: UIView {
             itemListStackView.addArrangedSubview(itemRow)
         }
         
-        let subtotalPrice = Double(response.transactionContext.amount) ?? 0
-        subtotalValueLabel.text = PriceFormatter.format(price: subtotalPrice)
-        payInValueLabel.text = PriceFormatter.format(price: subtotalPrice)
+        let subtotalPrice = response.transactionContext.amount
+        subtotalValueLabel.text = PriceFormatter.format(from: subtotalPrice)
+        payInValueLabel.text = PriceFormatter.format(from: subtotalPrice)
     }
     
     private func createItemRow(name: String, price: String) -> UIView {

@@ -41,7 +41,7 @@ class VoucherPageViewController: UIViewController {
 extension VoucherPageViewController: VoucherPageViewDelegate {
     func didTapUseButton(for voucher: VoucherItems) {
         print("Use tapped for voucher: \(voucher.name)")
-        delegate?.didSelectVoucher(voucher) // Panggil delegate saat voucher dipilih
-        navigationController?.popViewController(animated: true) // Kembali ke halaman transaksi
+        delegate?.didSelectVoucher(voucher)
+        navigationController?.popViewController(animated: true) 
     }
 }

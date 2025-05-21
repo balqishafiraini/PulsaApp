@@ -47,7 +47,6 @@ class TransactionSuccessViewController: UIViewController {
     }
 
     private func navigateBackToTopUp() {
-        // Kalau pakai navigationController, pop to TopUpPageViewController
         if let nav = navigationController {
             for vc in nav.viewControllers {
                 if vc is TopUpPageViewController {

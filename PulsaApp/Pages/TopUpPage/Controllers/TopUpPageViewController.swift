@@ -24,7 +24,6 @@ class TopUpPageViewController: UIViewController {
         super.viewDidLoad()
         topUpPageView.delegate = self
         
-        // Configure PulsaViewController to forward events directly to this controller
         pulsaVC.delegate = self
         
         setupChildViewControllers()
@@ -80,17 +79,17 @@ extension TopUpPageViewController: PulsaViewDelegate {
     }
     
     func didSelectPulsaProduct(_ product: ProductItems, phoneNumber: String) {
-        print("✅ Pulsa selected: \(product.nominal) for \(phoneNumber) - Handled by TopUpPageViewController")
+        print("Pulsa selected: \(product.nominal) for \(phoneNumber) - Handled by TopUpPageViewController")
         
         let transactionVC = TransactionPageViewController()
         transactionVC.selectedProduct = product
         transactionVC.phoneNumber = phoneNumber
         
         if let navController = navigationController {
-            print("✅ Navigation controller found! Pushing transactionVC...")
+            print("Navigation controller found! Pushing transactionVC...")
             navController.pushViewController(transactionVC, animated: true)
         } else {
-            print("❌ ERROR: Navigation controller is nil. Cannot push view controller.")
+            print("ERROR: Navigation controller is nil. Cannot push view controller.")
         }
     }
 
