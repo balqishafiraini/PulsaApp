@@ -12,7 +12,6 @@ class DataPackageView: UIView {
     lazy var mobileNumberLabel: UILabel = {
         let label = UILabel()
         label.text = "Data"
-        label.textColor = .gray
         return label
     }()
     

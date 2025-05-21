@@ -38,7 +38,6 @@ class TransactionPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("TransactionPageViewController viewDidLoad")
         updateTransactionViewIfLoaded()
     }
     
@@ -48,7 +47,6 @@ class TransactionPageViewController: UIViewController {
             guard isViewLoaded else { return }
 
             if let product = selectedProduct, let number = phoneNumber {
-                print("Transaction Page updating view with: \(product.nominal) for \(number)")
                 transactionPageView.selectedProduct = product
                 transactionPageView.phoneNumber = number
                 transactionPageView.appliedVoucher = appliedVoucher
@@ -89,7 +87,6 @@ extension TransactionPageViewController: TransactionPageViewDelegate {
 
 extension TransactionPageViewController: VoucherPageViewControllerDelegate {
     func didSelectVoucher(_ voucher: VoucherItems) {
-        print("Voucher \(voucher.name) selected in TransactionPage.")
         appliedVoucher = voucher
     }
 }

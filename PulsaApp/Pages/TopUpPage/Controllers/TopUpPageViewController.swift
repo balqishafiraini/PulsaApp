@@ -27,11 +27,6 @@ class TopUpPageViewController: UIViewController {
         pulsaVC.delegate = self
         
         setupChildViewControllers()
-        if let navController = navigationController {
-            print("Navigation controller exists in TopUpPageViewController")
-        } else {
-            print("WARNING: No navigation controller in TopUpPageViewController")
-        }
     }
 
     private func setupChildViewControllers() {
@@ -57,7 +52,6 @@ class TopUpPageViewController: UIViewController {
 
 extension TopUpPageViewController: TopUpPageViewDelegate {
     func didSelectSegment(at index: Int) {
-        print("Selected segment: \(index)")
         if index == 0 {
             pulsaVC.view.isHidden = false
             dataPackageVC.view.isHidden = true
@@ -79,14 +73,12 @@ extension TopUpPageViewController: PulsaViewDelegate {
     }
     
     func didSelectPulsaProduct(_ product: ProductItems, phoneNumber: String) {
-        print("Pulsa selected: \(product.nominal) for \(phoneNumber) - Handled by TopUpPageViewController")
         
         let transactionVC = TransactionPageViewController()
         transactionVC.selectedProduct = product
         transactionVC.phoneNumber = phoneNumber
         
         if let navController = navigationController {
-            print("Navigation controller found! Pushing transactionVC...")
             navController.pushViewController(transactionVC, animated: true)
         } else {
             print("ERROR: Navigation controller is nil. Cannot push view controller.")

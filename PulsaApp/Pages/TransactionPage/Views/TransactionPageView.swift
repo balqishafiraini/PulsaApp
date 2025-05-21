@@ -64,7 +64,6 @@ class TransactionPageView: UIView {
     private lazy var phoneNumberDisplayLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -79,7 +78,6 @@ class TransactionPageView: UIView {
         let label = UILabel()
         label.text = "Rincian Pembayaran"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -116,7 +114,6 @@ class TransactionPageView: UIView {
         let label = UILabel()
         label.text = "Voucher"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -132,7 +129,6 @@ class TransactionPageView: UIView {
         let label = UILabel()
         label.text = "Gunakan Voucher"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -181,7 +177,6 @@ class TransactionPageView: UIView {
     private lazy var voucherNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.textColor = .darkGray
         label.numberOfLines = 1
         return label
     }()
@@ -214,7 +209,6 @@ class TransactionPageView: UIView {
         let label = UILabel()
         label.text = "Gunakan Voucher"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -238,7 +232,6 @@ class TransactionPageView: UIView {
         let label = UILabel()
         label.text = "PIN Kredivo"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -472,12 +465,10 @@ class TransactionPageView: UIView {
     }
     
     @objc private func voucherButtonTapped() {
-        print("Voucher button tapped! Notifying delegate.")
         delegate?.transactionPageViewDidTapVoucher(self)
     }
     
     @objc private func removeVoucherTapped() {
-        print("Remove voucher tapped!")
         appliedVoucher = nil
         delegate?.transactionPageViewDidRemoveVoucher(self)
     }
@@ -493,7 +484,6 @@ class TransactionPageView: UIView {
     }
     
     @objc private func payButtonTapped() {
-        print("Pay button tapped!")
         guard let product = selectedProduct, let phoneNumber = phoneNumber else {
             print("Cannot process payment: Missing product or phone number")
             return
@@ -507,9 +497,7 @@ class TransactionPageView: UIView {
         }
         
         pinErrorMessageLabel.isHidden = true
-        
-        print("Processing payment for \(product.label) to \(phoneNumber) with PIN (hidden)")
-        
+                
         delegate?.transactionPageViewDidRequestPayment(for: product.productCode, phoneNumber: phoneNumber, pin: pinText)
     }
 }

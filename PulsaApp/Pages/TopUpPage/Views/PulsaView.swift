@@ -36,7 +36,6 @@ class PulsaView: UIView {
     private lazy var mobileNumberLabel: UILabel = {
         let label = UILabel()
         label.text = "Mobile number"
-        label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 11)
         return label
     }()
@@ -44,7 +43,6 @@ class PulsaView: UIView {
     private lazy var phoneNumberTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter phone number"
-        textField.textColor = .darkGray
         textField.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         textField.keyboardType = .numberPad
         textField.clearButtonMode = .never
@@ -123,7 +121,6 @@ class PulsaView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("PulsaView initialized: \(Unmanaged.passUnretained(self).toOpaque())")
         setupViews()
         setupPromoContainer()
         loadPulsaData()
@@ -138,37 +135,39 @@ class PulsaView: UIView {
         backgroundColor = .systemGray5
         
         addSubview(headerContainerView)
+        headerContainerView.addSubview(iconImage)
+        headerContainerView.addSubview(contactButton)
+        headerContainerView.addSubview(clearButton)
+        headerContainerView.addSubview(mobileNumberLabel)
+        headerContainerView.addSubview(phoneNumberTextField)
+        phoneNumberTextField.addSubview(textFieldBottomBorder)
+        
+        addSubview(scrollView)
+        scrollView.addSubview(pulsaOptionsStackView)
+        scrollView.addSubview(promoContainerView)
+        
         headerContainerView.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, height: 80)
 
-        headerContainerView.addSubview(iconImage)
         iconImage.anchor(left: headerContainerView.leftAnchor, paddingLeft: 16, width: 40,  height: 40)
         iconImage.centerY(inView: headerContainerView)
 
-        headerContainerView.addSubview(contactButton)
         contactButton.anchor(right: headerContainerView.rightAnchor, paddingRight: 16, width: 20, height: 20)
         contactButton.centerY(inView: headerContainerView)
 
-        headerContainerView.addSubview(clearButton)
         clearButton.anchor(right: contactButton.leftAnchor, paddingRight: 8, width: 20, height: 20)
         clearButton.centerY(inView: headerContainerView)
 
-        headerContainerView.addSubview(mobileNumberLabel)
         mobileNumberLabel.anchor(top: headerContainerView.topAnchor, left: iconImage.rightAnchor, paddingTop: 8, paddingLeft: 12)
 
-        headerContainerView.addSubview(phoneNumberTextField)
         phoneNumberTextField.anchor(top: mobileNumberLabel.bottomAnchor, left: iconImage.rightAnchor, right: clearButton.leftAnchor, paddingLeft: 12, paddingRight: 4, height: 40)
         
-        phoneNumberTextField.addSubview(textFieldBottomBorder)
         textFieldBottomBorder.anchor(left: phoneNumberTextField.leftAnchor, bottom: phoneNumberTextField.bottomAnchor, right: clearButton.rightAnchor, height: 1)
         
-        addSubview(scrollView)
         scrollView.anchor(top: headerContainerView.bottomAnchor, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, paddingTop: 10)
 
-        scrollView.addSubview(pulsaOptionsStackView)
         pulsaOptionsStackView.anchor(top: scrollView.topAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor)
         pulsaOptionsStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         
-        scrollView.addSubview(promoContainerView)
         promoContainerView.anchor(top: pulsaOptionsStackView.bottomAnchor, left: scrollView.leftAnchor, right: scrollView.rightAnchor, paddingTop: 10)
         
         promoContainerView.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.bottomAnchor).isActive = true
@@ -177,12 +176,12 @@ class PulsaView: UIView {
     private func setupPromoContainer() {
         promoContainerView.addSubview(promosLabel)
         promoContainerView.addSubview(voucherScrollView)
+        voucherScrollView.addSubview(voucherStackView)
 
         promosLabel.anchor(top: promoContainerView.topAnchor, left: promoContainerView.leftAnchor, right: promoContainerView.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
 
         voucherScrollView.anchor(top: promosLabel.bottomAnchor, left: promoContainerView.leftAnchor, bottom: promoContainerView.bottomAnchor, right: promoContainerView.rightAnchor, paddingTop: 12, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
         
-        voucherScrollView.addSubview(voucherStackView)
         voucherStackView.anchor(top: voucherScrollView.topAnchor, left: voucherScrollView.leftAnchor, bottom: voucherScrollView.bottomAnchor, right: voucherScrollView.rightAnchor)
         voucherStackView.heightAnchor.constraint(equalTo: voucherScrollView.heightAnchor).isActive = true
     }
@@ -299,8 +298,6 @@ class PulsaView: UIView {
         let nominal = sender.tag
         let productCode = sender.accessibilityIdentifier ?? ""
 
-        print("Pulsa button tapped. Nominal: \(nominal), Product Code: \(productCode)")
-
         let enteredPhoneNumber = phoneNumberTextField.text ?? ""
 
         guard enteredPhoneNumber.count >= 4 else {
@@ -309,7 +306,6 @@ class PulsaView: UIView {
         }
 
         if let selectedProduct = pulsaProducts.first(where: { $0.nominalInt == nominal && $0.productCode == productCode }) {
-            print("Product found: \(selectedProduct.label)")
             delegate?.didSelectPulsaProduct(selectedProduct, phoneNumber: enteredPhoneNumber)
         } else {
             print("DEBUG: Product not found for nominal \(nominal) and product code \(productCode).")

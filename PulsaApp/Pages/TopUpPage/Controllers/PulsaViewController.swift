@@ -21,7 +21,6 @@ class PulsaViewController: UIViewController {
         setupUI()
         
         pulsaView.delegate = self
-        print("PulsaView delegate set for: \(Unmanaged.passUnretained(pulsaView).toOpaque())")
     }
     
     private func setupUI() {

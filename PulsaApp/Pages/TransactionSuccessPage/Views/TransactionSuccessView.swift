@@ -84,7 +84,6 @@ class TransactionSuccessView: UIView {
     private lazy var phoneNumberLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        label.textColor = .darkGray
         return label
     }()
     
@@ -92,7 +91,6 @@ class TransactionSuccessView: UIView {
         let label = UILabel()
         label.text = "Status"
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .gray
         return label
     }()
     
@@ -108,14 +106,12 @@ class TransactionSuccessView: UIView {
         let label = UILabel()
         label.text = "Order ID"
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .gray
         return label
     }()
     
     private lazy var orderIdValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .gray
         label.textAlignment = .right
         return label
     }()
@@ -131,14 +127,12 @@ class TransactionSuccessView: UIView {
         let label = UILabel()
         label.text = "Subtotal"
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .darkGray
         return label
     }()
     
     private lazy var subtotalValueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .darkGray
         label.textAlignment = .right
         return label
     }()
@@ -279,13 +273,11 @@ class TransactionSuccessView: UIView {
         
         let nameLabel = UILabel()
         nameLabel.font = UIFont.systemFont(ofSize: 14)
-        nameLabel.textColor = .darkGray
         nameLabel.text = name
         nameLabel.numberOfLines = 2
         
         let priceLabel = UILabel()
         priceLabel.font = UIFont.systemFont(ofSize: 14)
-        priceLabel.textColor = .darkGray
         priceLabel.textAlignment = .right
         let jsonString = String(price)
         priceLabel.text = PriceFormatter.format(from: jsonString)
